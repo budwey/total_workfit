@@ -1,5 +1,6 @@
 {
   "name": "web",
+  "homepage": "http://budwey.github.io/total_workfit",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -47,6 +48,5 @@
   },
   "devDependencies": {
     "gh-pages": "^5.0.0"
-  },
-  "homepage": "http://budwey.github.io/total_workfit"
+  }
 }
