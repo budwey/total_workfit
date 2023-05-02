@@ -1,13 +1,45 @@
 body {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "SFUIDisplay-Normal";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body::-webkit-scrollbar {
+  display: none;
+}
+
+@font-face {
+  font-family: "SFUIDisplay-Normal";
+  src: local("SFUIDisplay"),
+    url("../public/Fonts/SFUIDisplay-Regular.otf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SFUIDisplay-Bold";
+  src: local("SFUIDisplay"),
+    url("../public/Fonts/SFUIDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "SFUIDisplay-Light";
+  src: local("SFUIDisplay"),
+    url("../public/Fonts/SFUIDisplay-Thin.otf") format("truetype");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "SFUIDisplay-Medium";
+  src: local("SFUIDisplay"),
+    url("../public/Fonts/SFUIDisplay-Medium.otf") format("truetype");
+  font-weight: medium;
+}
+@font-face {
+  font-family: "SFUIDisplay-Heavy";
+  src: local("SFUIDisplay"),
+    url("../public/Fonts/SFUIDisplay-Heavy.otf") format("truetype");
+  font-weight: bold;
 }
