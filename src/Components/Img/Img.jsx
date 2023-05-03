@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 
 import { AiOutlinePicture as DefaultImg } from "react-icons/ai";
 
-const Img = ({ src, height, width, borderRadius }) => {
+const Img = ({ src, height, width, borderRadius, border }) => {
   if (!src) return <DefaultImg height={height} />;
   return (
     <ImgBase
@@ -12,6 +12,7 @@ const Img = ({ src, height, width, borderRadius }) => {
       height={height}
       width={width}
       borderRadius={borderRadius}
+      border={border}
     />
   );
 };
@@ -28,6 +29,7 @@ const ImgBase = styled.img`
   width: ${(props) => props.width};
   border-radius: ${(props) => props.borderRadius};
   user-select: none;
+  border: ${(props) => props.border || "none"};
 `;
 
 export default Img;

@@ -6,12 +6,7 @@ import { THEME as theme } from "./theme";
 import favicon from "Assets/favicon.ico";
 
 import { Window, Header, Body } from "Layout";
-import {
-  FloatContainer,
-  SectionTemplate,
-  SectionContact,
-  Topbar,
-} from "Components";
+import { Topbar, Feed } from "Components";
 
 import useScroll from "Utils/Hooks/useScroll";
 import useScrollEvents from "Utils/Hooks/useScrollEvents";
@@ -45,34 +40,7 @@ function App() {
           />
         </Header>
         <Body>
-          {/* HOME PAGE */}
-          <FloatContainer
-            ref={(refHome) => (refs.current[sections.HOME.ID] = refHome)}
-            backgroundImage={sections.HOME.BACKGROUND}
-            children={<SectionTemplate src={sections.HOME} />}
-          />
-          {/* MOTIVATION PAGE */}
-          <FloatContainer
-            ref={(refMotivation) =>
-              (refs.current[sections.MOTIVATION.ID] = refMotivation)
-            }
-            backgroundImage={sections.MOTIVATION.BACKGROUND}
-            children={<SectionTemplate src={sections.MOTIVATION} isLogo />}
-          />
-          {/* ABOUTUS PAGE */}
-          <FloatContainer
-            ref={(refAbout) => (refs.current[sections.ABOUTUS.ID] = refAbout)}
-            backgroundImage={sections.ABOUTUS.BACKGROUND}
-            children={<SectionTemplate src={sections.ABOUTUS} isLogo />}
-          />
-          {/* CONTACT PAGE */}
-          <FloatContainer
-            ref={(refContact) =>
-              (refs.current[sections.CONTACT.ID] = refContact)
-            }
-            backgroundImage={sections.CONTACT.BACKGROUND}
-            children={<SectionContact src={sections.CONTACT} />}
-          />
+          <Feed src={sections} />
         </Body>
       </Window>
       <Helmet>

@@ -11,30 +11,36 @@ const SectionTemplate = ({ src, isLogo = false }) => {
     <Container>
       <Header>
         <TitleWrapper>
-          <Text font="bold" size="1.5rem">
+          <Text font="bold" size="1.3rem">
             {title}
           </Text>
         </TitleWrapper>
         <SubtitleWrapper>
-          <Text font="medium" size="1.5rem">
+          <Text font="medium" size="1.2rem">
             {subtitle}
           </Text>
         </SubtitleWrapper>
+        <InfoWrapper>
+          {info.map((paragraph, index) => {
+            return paragraph === "Total WorkFit" ? (
+              <ImgWrapperLit key={index}>
+                <Img height="250px" src={img} />
+              </ImgWrapperLit>
+            ) : (
+              <Text size="1.1rem" key={index}>
+                {paragraph}
+              </Text>
+            );
+          })}
+        </InfoWrapper>
       </Header>
-      <InfoWrapper>
-        {info.map((paragraph, index) => {
-          return paragraph === "Total WorkFit" ? (
-            <ImgWrapperLit key={index}>
-              <Img height="100%" src={img} />
-            </ImgWrapperLit>
-          ) : (
-            <Text size="1.3rem" key={index}>
-              {paragraph}
-            </Text>
-          );
-        })}
-      </InfoWrapper>
-      <ImgWrapper>{isLogo && <Img height="100%" src={img} />}</ImgWrapper>
+      {isLogo && (
+        <Body>
+          <ImgWrapper>
+            <Img height="250px" src={img} />
+          </ImgWrapper>
+        </Body>
+      )}
     </Container>
   );
 };
@@ -43,21 +49,32 @@ SectionTemplate.propTypes = {};
 
 const Container = styled.div`
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  justify-content: flex-start;
   width: 100%;
-  height: 100vh;
-  padding: 0 5rem;
-  padding-top: 15%;
+  min-height: 100vh;
+  height: fit-content;
+  padding: 2% 10%;
+  padding-top: 8%;
   box-sizing: border-box;
-  gap: 50px;
-  position: relative;
+  gap: 1%;
   overflow: auto;
 `;
 
 const Header = styled.div`
-  padding-top: 20px;
-  padding-left: 50px;
+  box-sizing: border-box;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  flex: 5;
+`;
+
+const Body = styled.div`
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5%;
   flex: 1;
 `;
 
@@ -65,26 +82,34 @@ const TitleWrapper = styled.div``;
 
 const SubtitleWrapper = styled.div`
   padding-top: 0.8rem;
+  box-sizing: border-box;
 `;
 
 const InfoWrapper = styled.div`
-  padding-top: 0.8rem;
-  flex: 5;
+  justify-content: flex-start;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 2rem;
+  box-sizing: border-box;
+  padding-top: 10%;
 `;
 
 const ImgWrapper = styled.div`
   display: flex;
   justify-content: center;
-  height: 300px;
-  opacity: 0.35;
+  height: 100%;
+  width: 250px;
+  opacity: 0.2;
   box-sizing: border-box;
-  padding-bottom: 50px;
+  padding-bottom: 2%;
+  padding-top: 4%;
 `;
 const ImgWrapperLit = styled(ImgWrapper)`
-  height: 350px;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  height: 250px;
+  width: 100%;
   padding: 0;
   opacity: 0.5;
 `;

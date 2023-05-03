@@ -1,5 +1,6 @@
 import React, { forwardRef } from "react";
 import styled from "styled-components";
+import { device } from "sizes";
 import PropTypes from "prop-types";
 
 const FloatContainer = forwardRef(
@@ -21,7 +22,7 @@ FloatContainer.propTypes = {};
 const Container = styled.div`
   background-color: ${(props) => props.backgroundColor || "aliceblue"};
   width: 100%;
-  height: 100%;
+  height: fit-content;
   color: black;
   display: flex;
   justify-content: center;
@@ -43,18 +44,24 @@ const Container = styled.div`
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: white;
   width: 50%;
-  height: 100%;
-  box-sizing: border-box;
-  padding: 100px 2%;
-  min-width: 750px;
+  min-height: 100vh;
+  height: fit-content;
+  min-width: 412px;
   max-width: 1000px;
   z-index: 1;
   border-left: 1px solid silver;
   border-right: 1px solid silver;
+
+  @media ${device.tablet} {
+    min-width: 70%;
+  }
+
+  @media ${device.mobile} {
+    min-width: 100%;
+    border-bottom: 1px solid silver;
+  }
 `;
 
 export default FloatContainer;

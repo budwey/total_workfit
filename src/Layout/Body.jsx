@@ -7,9 +7,11 @@ const Body = forwardRef(({ children }, ref) => {
 
 const BodyBase = styled.div`
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  padding-top: 75px;
   transition: transform 0.5s;
   background-color: aliceblue;
+  box-sizing: border-box;
 `;
 
 export default Body;

@@ -22,6 +22,12 @@ const onClickLocation = () => {
   );
 };
 
+export const sections_types = {
+  TEMPLATE_LOGO: "template_logo",
+  TEMPLATE: "template",
+  CONTACT: "contact",
+};
+
 const sections = {
   HOME: {
     ID: 1,
@@ -38,6 +44,7 @@ const sections = {
     BACKGROUND: pic1,
     ICON: <FiHome size={25} />,
     SCROLLPOS: 0,
+    TYPE: sections_types.TEMPLATE,
   },
   MOTIVATION: {
     ID: 2,
@@ -53,6 +60,7 @@ const sections = {
     BACKGROUND: pic2,
     ICON: <HiOutlineLightBulb size={25} />,
     SCROLLPOS: 33 - 20,
+    TYPE: sections_types.TEMPLATE_LOGO,
   },
   ABOUTUS: {
     ID: 3,
@@ -69,6 +77,7 @@ const sections = {
     BACKGROUND: pic3,
     ICON: <MdOutlinePeople size={25} />,
     SCROLLPOS: 67 - 20,
+    TYPE: sections_types.TEMPLATE_LOGO,
   },
   CONTACT: {
     ID: 4,
@@ -104,6 +113,7 @@ const sections = {
     },
     ICON: <MdOutlineContactSupport size={25} />,
     SCROLLPOS: 100 - 20,
+    TYPE: sections_types.CONTACT,
   },
 };
 
