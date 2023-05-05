@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/total_workfit/static/css/main.769411cc.css",
+    "main.js": "/total_workfit/static/js/main.2b8df414.js",
+    "static/media/pic3.webp": "/total_workfit/static/media/pic3.06fa3bf20466d2722261.webp",
+    "static/media/pic2.webp": "/total_workfit/static/media/pic2.5597ef9c7d4f37f22cad.webp",
+    "static/media/logo.png": "/total_workfit/static/media/logo.2999907fa9b0a042a47e.png",
+    "static/media/SFUIDisplay-Bold.ttf": "/total_workfit/static/media/SFUIDisplay-Bold.591afb1f58d52cd56536.ttf",
+    "static/media/SFUIDisplay-Heavy.otf": "/total_workfit/static/media/SFUIDisplay-Heavy.89cc5408465b81d8b62c.otf",
+    "static/media/SFUIDisplay-Medium.otf": "/total_workfit/static/media/SFUIDisplay-Medium.052ed8a3c82a60b3166f.otf",
+    "static/media/pic1.webp": "/total_workfit/static/media/pic1.33fca370456e4602d7e0.webp",
+    "static/media/SFUIDisplay-Thin.otf": "/total_workfit/static/media/SFUIDisplay-Thin.28553fb75ca1b8451d2a.otf",
+    "static/media/SFUIDisplay-Regular.otf": "/total_workfit/static/media/SFUIDisplay-Regular.824bcb096242327a0403.otf",
+    "static/media/logo2.png": "/total_workfit/static/media/logo2.0bd59a3d9f879c5f7a5e.png",
+    "static/media/logoMod2.png": "/total_workfit/static/media/logoMod2.cdc4b19753785ee3ffcd.png",
+    "static/media/info.png": "/total_workfit/static/media/info.90f612cdd862982353aa.png",
+    "static/media/aboutus.png": "/total_workfit/static/media/aboutus.d9d238ccdffaff6fdb81.png",
+    "static/media/pic4.webp": "/total_workfit/static/media/pic4.a676ae4541cded664b53.webp",
+    "static/media/favicon.ico": "/total_workfit/static/media/favicon.30c052b3ec1fe2df71c1.ico",
+    "static/media/location.jpg": "/total_workfit/static/media/location.42b85dd5be2cc582846a.jpg",
+    "index.html": "/total_workfit/index.html",
+    "main.769411cc.css.map": "/total_workfit/static/css/main.769411cc.css.map",
+    "main.2b8df414.js.map": "/total_workfit/static/js/main.2b8df414.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.769411cc.css",
+    "static/js/main.2b8df414.js"
+  ]
+}
