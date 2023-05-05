@@ -10,6 +10,10 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
 @font-face {
   font-family: "SFUIDisplay-Normal";
   src: local("SFUIDisplay"),

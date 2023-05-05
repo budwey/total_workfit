@@ -15,6 +15,8 @@ export function useScrollEvents(scrollPos) {
 
   useEffect(() => {
     selectActiveItem();
+    // selectActiveItem not necessary for this case, so warning is ignored.
+    // eslint-disable-next-line
   }, [scrollPos]);
 
   return {

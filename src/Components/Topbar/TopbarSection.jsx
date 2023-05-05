@@ -1,16 +1,21 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 import { Text } from "Components/Text";
+import PropTypes from "prop-types";
 
 const TopbarSection = ({ section, onClick }) => {
   return (
     <Wrapper onClick={() => onClick(section)}>
-      <Text font="bold" size="1.75rem">
+      <Text font="bold" size="1.5rem">
         {section.NAME}
       </Text>
     </Wrapper>
   );
+};
+
+TopbarSection.propTypes = {
+  section: PropTypes.object,
+  onClick: PropTypes.func,
 };
 
 const Wrapper = styled.div`
@@ -27,7 +32,5 @@ const Wrapper = styled.div`
     transition: 0.25s ease all;
   }
 `;
-
-TopbarSection.propTypes = {};
 
 export default TopbarSection;

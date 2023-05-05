@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
@@ -22,6 +22,8 @@ const Menu = ({ menuItems, onClick, selectedItem }) => {
 
 Menu.propTypes = {
   menuItems: PropTypes.object,
+  onClick: PropTypes.func,
+  selectedItem: PropTypes.object,
 };
 
 const Container = styled.div`

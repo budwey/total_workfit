@@ -45,7 +45,10 @@ const SectionTemplate = ({ src, isLogo = false }) => {
   );
 };
 
-SectionTemplate.propTypes = {};
+SectionTemplate.propTypes = {
+  src: PropTypes.object,
+  isLogo: PropTypes.bool,
+};
 
 const Container = styled.div`
   display: flex;

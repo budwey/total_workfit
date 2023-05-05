@@ -66,7 +66,9 @@ const SectionContact = ({ src }) => {
   );
 };
 
-SectionContact.propTypes = {};
+SectionContact.propTypes = {
+  src: PropTypes.object,
+};
 
 const Container = styled.div`
   display: flex;

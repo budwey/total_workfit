@@ -1,10 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { ThemeProvider } from "styled-components";
 import { Helmet } from "react-helmet";
-import Expand from "react-expand-animated";
-
 import { THEME as theme } from "./theme";
-
 import favicon from "Assets/favicon.ico";
 
 import { Window, Header, Body } from "Layout";
@@ -19,7 +16,6 @@ import {
 
 import useScroll from "Utils/Hooks/useScroll";
 import useScrollEvents from "Utils/Hooks/useScrollEvents";
-
 import sections, { sections_types } from "Data/sections";
 
 function App() {
@@ -37,6 +33,8 @@ function App() {
         return <SectionTemplate src={section} />;
       case sections_types.CONTACT:
         return <SectionContact src={section} />;
+      default:
+        break;
     }
   };
 

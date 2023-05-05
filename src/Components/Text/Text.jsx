@@ -40,6 +40,8 @@ const handleFontSize = (props) => {
       return props.theme.FONT.BOLD;
     case "heavy":
       return props.theme.FONT.HEAVY;
+    default:
+      break;
   }
 };
 

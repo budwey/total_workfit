@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 
@@ -58,9 +59,14 @@ const Topbar = ({
   }
 };
 
-export default Topbar;
+Text.propTypes = {
+  menuItems: PropTypes.object,
+  onClickItem: PropTypes.func,
+  selectedItem: PropTypes.object,
+  onToggleMenu: PropTypes.func,
+  stateMenu: PropTypes.bool,
+};
 
-//Styled components:
 const Container = styled.div`
   width: 100%;
   box-sizing: border-box;
@@ -98,3 +104,5 @@ const FlexWrapper = styled.div`
 const FlexWrapperEnd = styled(FlexWrapper)`
   justify-content: flex-end;
 `;
+
+export default Topbar;

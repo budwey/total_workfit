@@ -17,7 +17,11 @@ const FloatContainer = forwardRef(
   }
 );
 
-FloatContainer.propTypes = {};
+FloatContainer.propTypes = {
+  backgroundImage: PropTypes.string,
+  backgroundColor: PropTypes.string,
+  children: PropTypes.any,
+};
 
 const Container = styled.div`
   background-color: ${(props) => props.backgroundColor || "aliceblue"};

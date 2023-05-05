@@ -11,7 +11,10 @@ const TopbarMenu = ({ open, children }) => {
   );
 };
 
-TopbarMenu.propTypes = {};
+TopbarMenu.propTypes = {
+  open: PropTypes.bool,
+  children: PropTypes.any,
+};
 
 const Container = styled.div`
   background-color: ${(props) => props.theme.COLOR.YELLOW};
