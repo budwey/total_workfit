@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import { size } from "sizes";
+import { AiFillCaretDown, AiFillCaretUp } from "react-icons/ai";
 
+import { size } from "sizes";
 import { Menu, Logo } from "Components";
 
-const Topbar = ({ menuItems, onClickItem, selectedItem }) => {
+const Topbar = ({
+  menuItems,
+  onClickItem,
+  selectedItem,
+  onToggleMenu,
+  stateMenu,
+}) => {
   const [isDesktop, setDesktop] = useState(window.innerWidth >= size.mobile);
 
   const updateMedia = () => {
@@ -19,8 +26,11 @@ const Topbar = ({ menuItems, onClickItem, selectedItem }) => {
   if (!isDesktop) {
     return (
       <Container>
-        <FlexWrapper>
-          <IconWrapper>{selectedItem?.ICON}</IconWrapper>
+        <FlexWrapper onClick={onToggleMenu}>
+          <IconWrapperMobile>
+            {selectedItem?.ICON}
+            {stateMenu ? <AiFillCaretUp /> : <AiFillCaretDown />}
+          </IconWrapperMobile>
         </FlexWrapper>
         <FlexWrapperEnd>
           <Logo />
@@ -53,7 +63,6 @@ export default Topbar;
 //Styled components:
 const Container = styled.div`
   width: 100%;
-  padding-left: 10px;
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -61,6 +70,7 @@ const Container = styled.div`
   user-select: none;
   box-sizing: border-box;
   height: 100%;
+  padding: 1rem;
 `;
 
 const IconWrapper = styled.div`
@@ -72,6 +82,11 @@ const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+`;
+
+const IconWrapperMobile = styled(IconWrapper)`
+  border-radius: 1rem;
 `;
 
 const FlexWrapper = styled.div`

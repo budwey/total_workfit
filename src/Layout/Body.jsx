@@ -10,7 +10,6 @@ const BodyBase = styled.div`
   height: 100vh;
   padding-top: 75px;
   transition: transform 0.5s;
-  background-color: aliceblue;
   box-sizing: border-box;
 `;
 

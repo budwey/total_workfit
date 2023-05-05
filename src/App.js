@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from "react";
 import { ThemeProvider } from "styled-components";
 import { Helmet } from "react-helmet";
+import Expand from "react-expand-animated";
+
 import { THEME as theme } from "./theme";
 
 import favicon from "Assets/favicon.ico";
@@ -11,6 +13,8 @@ import {
   SectionTemplate,
   SectionContact,
   FloatContainer,
+  TopbarMenu,
+  TopbarSection,
 } from "Components";
 
 import useScroll from "Utils/Hooks/useScroll";
@@ -22,20 +26,8 @@ function App() {
   const [selectedItem, setSelectedItem] = useState(sections.HOME);
   const { scrollPercentage } = useScroll();
   const { activeItem } = useScrollEvents(scrollPercentage);
+  const [stateMenu, setStateMenu] = useState(false);
   const ref = useRef({});
-
-  useEffect(() => {
-    setSelectedItem(activeItem);
-  }, [activeItem]);
-
-  const handleClick = (item) => {
-    if (ref && ref.current[item.ID]) {
-      ref.current[item.ID].scrollIntoView({
-        behavior: "smooth",
-        inline: "start",
-      });
-    }
-  };
 
   const getChildren = (section) => {
     switch (section.TYPE) {
@@ -48,15 +40,55 @@ function App() {
     }
   };
 
+  const handleClickDesktop = (item) => {
+    if (ref && ref.current[item.ID]) {
+      ref.current[item.ID].scrollIntoView({
+        behavior: "smooth",
+        inline: "start",
+      });
+    }
+  };
+
+  const handleClickMobile = (item) => {
+    if (ref && ref.current[item.ID]) {
+      ref.current[item.ID].scrollIntoView({
+        behavior: "smooth",
+        inline: "start",
+      });
+      setStateMenu(!stateMenu);
+    }
+  };
+
+  const handleToggleMenu = () => {
+    setStateMenu(!stateMenu);
+  };
+
+  useEffect(() => {
+    setSelectedItem(activeItem);
+  }, [activeItem]);
+
   return (
     <ThemeProvider theme={theme}>
       <Window>
         <Header>
           <Topbar
             menuItems={sections}
-            onClickItem={handleClick}
+            onClickItem={handleClickDesktop}
             selectedItem={selectedItem}
+            onToggleMenu={handleToggleMenu}
+            stateMenu={stateMenu}
           />
+          <TopbarMenu open={stateMenu}>
+            {Object.values(sections).map((SECTION) => {
+              return (
+                <TopbarSection
+                  key={SECTION.ID}
+                  section={SECTION}
+                  onClick={() => handleClickMobile(SECTION)}
+                />
+              );
+            })}
+          </TopbarMenu>
         </Header>
         <Body>
           {Object.values(sections).map((SECTION) => {

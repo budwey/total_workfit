@@ -5,7 +5,6 @@ const Header = styled.div`
   position: fixed;
   top: 0;
   height: 75px;
-  padding: 1rem;
   transition: 0.25s ease all;
   z-index: 3;
 

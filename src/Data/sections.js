@@ -14,11 +14,11 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { HiLocationMarker, HiOutlineLightBulb } from "react-icons/hi";
 
-import locationImg from "Assets/location.png";
+import locationImg from "Assets/location.jpg";
 
 const onClickLocation = () => {
   window.open(
-    "https://www.google.com/maps/place/Centro+Insular+de+Deportes+de+Gran+Canaria/@28.1130894,-15.4203185,17z/data=!3m1!4b1!4m6!3m5!1s0xc4095848462aaa9:0x9ceb6601a23aec80!8m2!3d28.1130847!4d-15.4177436!16zL20vMGR0MnNw"
+    "https://www.google.es/maps/place/Guaguas+Municipales/@28.1565534,-15.4227128,18z/data=!4m15!1m8!3m7!1s0xc40954e881656df:0xe96ef4cfbb7aef6a!2sC.+Arequipa,+35008,+Las+Palmas!3b1!8m2!3d28.1566047!4d-15.4214313!16s%2Fg%2F1tgvfwkh!3m5!1s0xc40954e6321e253:0xa48b1cec97e49a65!8m2!3d28.1562889!4d-15.4216819!16s%2Fg%2F12qgw0tk4?hl=es"
   );
 };
 
@@ -35,7 +35,7 @@ const sections = {
     TITLE: "El bienestar empieza",
     SUBTITLE: "sintiéndote bien tú mismo.",
     INFO: [
-      "La práctica de ejercicio ofrece beneficios cognitivos que mejoran el rendimiento y por lo tanto el negocio, así como la viabilidad de este; tanto en términos de publicidad. como en cualquier ámbito relacionado con la Responsabilidad Civil y Coporativa.",
+      "La práctica de ejercicio ofrece beneficios cognitivos que mejoran el rendimiento y por lo tanto el negocio, así como la viabilidad de este; tanto en términos de publicidad. como en cualquier ámbito relacionado con la Responsabilidad Civil y Corporativa.",
       "Es por ello, que nace la mejor herramienta para mejorar la vida de tus trabajadores, la razón de ser de este proyecto:",
       "Total WorkFit",
       "Contando con instalaciones deportivas y áreas de recreo, ayudaremos a los trabajadores, mediante actividades conjuntas o individuales, a desarrollarse físicamente y a motivarlos a relacionarse entre ellos , lo que se traducirá en un mejor clima laboral y en una mejora de la salud personal.",
@@ -104,7 +104,7 @@ const sections = {
       {
         icon: <HiLocationMarker size={20} />,
         name: "Dirección",
-        value: "Avda. Alcalde Ramírez Bethencourt s/n, 35003",
+        value: "C/ Arequipa s/n. Urb. Industrial El Sebadal, 35008",
       },
     ],
     LOCATION: {

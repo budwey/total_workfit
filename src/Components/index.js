@@ -5,4 +5,3 @@ export * from "./Menu";
 export * from "./Logo";
 export * from "./FloatContainer";
 export * from "./SectionTemplate";
-export * from "./Feed";
