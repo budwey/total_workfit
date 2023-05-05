@@ -6,6 +6,7 @@ const Window = styled.div`
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  box-sizing: border-box;
 `;
 
 export default Window;

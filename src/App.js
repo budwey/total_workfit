@@ -6,26 +6,45 @@ import { THEME as theme } from "./theme";
 import favicon from "Assets/favicon.ico";
 
 import { Window, Header, Body } from "Layout";
-import { Topbar, Feed } from "Components";
+import {
+  Topbar,
+  SectionTemplate,
+  SectionContact,
+  FloatContainer,
+} from "Components";
 
 import useScroll from "Utils/Hooks/useScroll";
 import useScrollEvents from "Utils/Hooks/useScrollEvents";
 
-import sections from "Data/sections";
+import sections, { sections_types } from "Data/sections";
 
 function App() {
-  const refs = useRef({});
   const [selectedItem, setSelectedItem] = useState(sections.HOME);
   const { scrollPercentage } = useScroll();
   const { activeItem } = useScrollEvents(scrollPercentage);
+  const ref = useRef({});
 
   useEffect(() => {
     setSelectedItem(activeItem);
   }, [activeItem]);
 
   const handleClick = (item) => {
-    if (refs && refs.current) {
-      refs.current[item.ID].scrollIntoView({ behavior: "smooth" });
+    if (ref && ref.current[item.ID]) {
+      ref.current[item.ID].scrollIntoView({
+        behavior: "smooth",
+        inline: "start",
+      });
+    }
+  };
+
+  const getChildren = (section) => {
+    switch (section.TYPE) {
+      case sections_types.TEMPLATE_LOGO:
+        return <SectionTemplate src={section} isLogo />;
+      case sections_types.TEMPLATE:
+        return <SectionTemplate src={section} />;
+      case sections_types.CONTACT:
+        return <SectionContact src={section} />;
     }
   };
 
@@ -40,7 +59,16 @@ function App() {
           />
         </Header>
         <Body>
-          <Feed src={sections} />
+          {Object.values(sections).map((SECTION) => {
+            return (
+              <FloatContainer
+                key={SECTION.ID}
+                ref={(item) => (ref.current[SECTION.ID] = item)}
+                backgroundImage={SECTION.BACKGROUND}
+                children={getChildren(SECTION)}
+              />
+            );
+          })}
         </Body>
       </Window>
       <Helmet>

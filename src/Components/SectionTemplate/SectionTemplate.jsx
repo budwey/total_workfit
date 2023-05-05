@@ -11,12 +11,12 @@ const SectionTemplate = ({ src, isLogo = false }) => {
     <Container>
       <Header>
         <TitleWrapper>
-          <Text font="bold" size="1.3rem">
+          <Text font="bold" size="1.5rem">
             {title}
           </Text>
         </TitleWrapper>
         <SubtitleWrapper>
-          <Text font="medium" size="1.2rem">
+          <Text font="medium" size="1.3rem">
             {subtitle}
           </Text>
         </SubtitleWrapper>
@@ -27,7 +27,7 @@ const SectionTemplate = ({ src, isLogo = false }) => {
                 <Img height="250px" src={img} />
               </ImgWrapperLit>
             ) : (
-              <Text size="1.1rem" key={index}>
+              <Text size="1.15rem" key={index}>
                 {paragraph}
               </Text>
             );

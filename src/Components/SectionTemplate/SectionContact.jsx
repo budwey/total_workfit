@@ -18,12 +18,12 @@ const SectionContact = ({ src }) => {
     <Container>
       <Header>
         <TitleWrapper>
-          <Text font="bold" size="1.3rem">
+          <Text font="bold" size="1.5rem">
             {title}
           </Text>
         </TitleWrapper>
         <SubtitleWrapper>
-          <Text font="medium" size="1.2rem">
+          <Text font="medium" size="1.3rem">
             {subtitle}
           </Text>
         </SubtitleWrapper>
@@ -34,7 +34,7 @@ const SectionContact = ({ src }) => {
                 <Img height="100%" src={img} />
               </ImgWrapperLit>
             ) : (
-              <Text size="1.1rem" key={index}>
+              <Text size="1.15rem" key={index}>
                 {paragraph}
               </Text>
             );
@@ -73,10 +73,9 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  width: 100%;
   min-height: 100vh;
-  padding: 2% 10%;
-  padding-top: 8%;
+  padding: 10%;
+  padding-top: 5%;
   box-sizing: border-box;
   gap: 1%;
   overflow: hidden;

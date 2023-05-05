@@ -27,6 +27,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
+  scroll-margin-top: 50px;
 
   &:before {
     content: "";
